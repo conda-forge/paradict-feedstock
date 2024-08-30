@@ -1,5 +1,5 @@
 {% set name = "paradict" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paradict-{{ version }}.tar.gz
-  sha256: a9b3acc137bca5d09d698b64cded4d4b589b38f5be8128acff85efbdc31ee599
+  sha256: f399e4cb1271234e683085de9c265d6082885494c2b5bc511c4344b0e6591134
 
 build:
   entry_points:
