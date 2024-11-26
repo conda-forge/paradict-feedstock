@@ -1,13 +1,13 @@
 {% set name = "paradict" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paradict-{{ version }}.tar.gz
-  sha256: 81c5548efeb2164c6687c039c4f855f249cfd6622691d06a3f46f007ab16e539
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paradict-{{ version }}.tar.gz
+  sha256: 487c93c673e3f4ec97e9b82c2140a4d4b290a7d83d1ee6e4aa78d27f577fe94b
 
 build:
   entry_points:
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools
     - wheel
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - ustrid
     - written
 
@@ -35,6 +35,7 @@ test:
     - paradict --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyrustic/paradict
