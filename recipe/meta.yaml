@@ -24,8 +24,6 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - ustrid
-    - written
 
 test:
   imports:
